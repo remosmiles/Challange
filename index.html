@@ -1,0 +1,41 @@
+<div id="game-bg"></div>
+<div class="container">
+    <div id="start-screen">
+        <h1 class="neon-title">GLOBAL REFLEX</h1>
+        <div class="info-box">
+            <p><strong>MISSION:</strong> Klicke das Ziel, bevor die Zeit abläuft.</p>
+            <ul>
+                <li>Zeit wird <b>kürzer</b>, Ziel wird <b>kleiner</b>.</li>
+                <li>Nur dein <b>bester Score</b> wird gespeichert!</li>
+            </ul>
+        </div>
+        <input type="text" id="player-name" placeholder="Dein Name..." maxlength="12">
+        <br>
+        <button onclick="startGame()" class="glow-btn">START CHALLENGE</button>
+    </div>
+
+    <div id="game-screen" style="display:none;">
+        <div class="header">
+            <div class="stats">SCORE: <span id="level-count">0</span></div>
+            <div id="timer-text">1.00s</div>
+        </div>
+        <div class="timer-wrapper"><div id="timer-bar"></div></div>
+        <div id="game-area">
+            <div id="target" onclick="hitTarget(event)"></div>
+        </div>
+    </div>
+
+    <div id="leaderboard-section">
+        <h3>🏆 GLOBAL TOP 10</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Punkte</th>
+                    <th>Datum</th>
+                </tr>
+            </thead>
+            <tbody id="leaderboard-body"></tbody>
+        </table>
+    </div>
+</div>
